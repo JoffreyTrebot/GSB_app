@@ -6,41 +6,20 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <ion-item>
-    <ion-label>Nom du praticien</ion-label>
-    <ion-input type="text"  name="title"></ion-input>
-  </ion-item>
-  <ion-item>
-    <ion-label>Date de la visite</ion-label>
-    <ion-input type="text"  name="title"></ion-input>
-  </ion-item>
-  <ion-item>
-    <ion-label>Heure de début de visite</ion-label>
-    <ion-input type="text"  name="title"></ion-input>
-  </ion-item>
-  <ion-item>
-    <ion-label>Montant du repas du midi</ion-label>
-    <ion-input type="text"  name="title"></ion-input>
-  </ion-item>
-  <ion-item>
-    <ion-label>Montant du repas du soir</ion-label>
-    <ion-input type="text"  name="title"></ion-input>
-  </ion-item>
-  <ion-item>
-    <ion-label>Prix de la nuitée</ion-label>
-    <ion-input type="text"  name="title"></ion-input>
-  </ion-item>
-  <ion-item>
-    <ion-label>Montant total hors forfait</ion-label>
-    <ion-input type="text"  name="title"></ion-input>
-  </ion-item>
-  <ion-item>
-    <ion-label>Nombre de justificatifs</ion-label>
-    <ion-input type="text"  name="title"></ion-input>
-  </ion-item>
-  <ion-item>
-    <ion-label>Montant total déboursé</ion-label>
-    <ion-input type="text"  name="title"></ion-input>
-  </ion-item>
+<ion-content>
+
+  <ion-list>
+    <ion-item>
+      <ion-label color="primary">Matricule</ion-label>
+      <ion-input placeholder="ex: a131"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="primary">Date d'embauche</ion-label>
+      <ion-datetime placeholder=" ex: 26/02/1997" displayFormat="DD/MM/YYYY" [(ngModel)]="myDate"></ion-datetime>
+    </ion-item>
+
+    <button ion-button full>CONNEXION</button>
+  </ion-list>
+
 </ion-content>
