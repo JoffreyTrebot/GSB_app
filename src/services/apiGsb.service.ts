@@ -9,14 +9,14 @@ import 'rxjs/add/operator/map';
 // Models
 // Importez vos models ici
 @Injectable()
-export class NewApiService {
+export class ApiGsbService {
 
     private baseUrl: string = 'http://joffreytrebot.raidghost.com/';
 
     constructor(private http: Http) { }
 
-    public getObjects(): Promise<any> {
-		const url = `${this.baseUrl}apiGSB/collaborateur/read_one.php`;
+    public getPraticiens(): Promise<any> {
+		const url = `${this.baseUrl}apiGSB/praticien/read.php`;
 
         return this.http.get(url)
         .toPromise()

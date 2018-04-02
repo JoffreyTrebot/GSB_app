@@ -13,6 +13,10 @@ import { MedicamentsPage } from '../pages/Medicaments/medicaments';
 import { VisiteursPage } from '../pages/Visiteurs/visiteurs';
 import { PraticiensPage } from '../pages/Praticiens/praticiens';
 
+// Api
+import { HttpModule } from '@angular/http';
+import { ApiGsbService } from '../services/apiGsb.service';
+
 @NgModule({
   declarations: [
     MyApp,
@@ -23,6 +27,7 @@ import { PraticiensPage } from '../pages/Praticiens/praticiens';
     PraticiensPage
   ],
   imports: [
+    HttpModule,
     BrowserModule,
     IonicModule.forRoot(MyApp)
   ],
@@ -36,6 +41,7 @@ import { PraticiensPage } from '../pages/Praticiens/praticiens';
     PraticiensPage
   ],
   providers: [
+    ApiGsbService,
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler}

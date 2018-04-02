@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      GSB Application
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list *ngFor="let data of praticiens.praticiens">
+    <ion-item>
+      <h2>Numéro : {{ data.PRA_NUM }}</h2>
+      <h2>Nom : {{ data.PRA_NOM }} | Prénom : {{ data.PRA_PRENOM }}</h2>
+      <h2>Adresse : {{ data.PRA_ADRESSE }}, {{ data.PRA_VILLE }} </h2>
+      <h2>Coeff notoriété : {{ data.PRA_COEFNOTORIETE }} </h2>
+      <h2>Lieu d'exercice : {{ data.TYP_LIEU }} </h2>
+    </ion-item>
+  </ion-list>
+</ion-content>
