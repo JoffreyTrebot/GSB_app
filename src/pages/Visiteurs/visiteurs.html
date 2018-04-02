@@ -7,5 +7,14 @@
 </ion-header>
 
 <ion-content>
-  <h2>VISITEURS</h2>
+  <ion-list *ngFor="let data of collaborateurs.collaborateurs">
+    <ion-item>
+      <h2>Matricule : {{ data.COL_MATRICULE }}</h2>
+      <h2>Nom : {{ data.COL_NOM }} | Prénom : {{ data.COL_PRENOM }}</h2>
+      <h2>Adresse : {{ data.COL_ADRESSE }}, {{ data.COL_CP }}</h2>
+      <h2>Ville : {{ data.COL_VILLE }}</h2>
+      <h2>Secteur : {{ data.SEC_LIBELLE }}</h2>
+      <h2>Labo : {{ data.LAB_CHEFVENTE }}</h2>
+    </ion-item>
+  </ion-list>
 </ion-content>

@@ -33,4 +33,13 @@ export class ApiGsbService {
         .catch(error => console.log('Une erreur est survenue ' + error))
     }
 
+    public getCollaborateurs(): Promise<any> {
+		const url = `${this.baseUrl}apiGSB/collaborateur/read.php`;
+
+        return this.http.get(url)
+        .toPromise()
+        .then(response => response.json())
+        .catch(error => console.log('Une erreur est survenue ' + error))
+    }
+
 }
