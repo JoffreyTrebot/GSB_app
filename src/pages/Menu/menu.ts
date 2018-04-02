@@ -21,6 +21,6 @@ export class MenuPage {
     this.navCtrl.push(PraticiensPage);
   }
   private showMed(){
-    this.navCtrl.push(PraticiensPage);
+    this.navCtrl.push(MedicamentsPage);
   }
 }

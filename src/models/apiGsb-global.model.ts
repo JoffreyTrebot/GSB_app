@@ -1,4 +1,5 @@
 import { ApiGsbPraticiens } from './apiGsb-praticiens.model';
+import { ApiGsbMedicaments } from './apiGsb-medicaments.model';
 
 export class ApiGsbGlobal{
   praticiens: string;
@@ -11,4 +12,13 @@ export class ApiGsbGlobal{
   PRA_COEFNOTORIETE: ApiGsbPraticiens[];
   TYP_CODE:ApiGsbPraticiens[];
   dep: ApiGsbPraticiens[];
+
+  medicaments: string;
+  MED_NOMCOMMERCIAL: ApiGsbMedicaments[];
+  FAM_CODE: ApiGsbMedicaments[];
+  MED_COMPOSITION: ApiGsbMedicaments[];
+  MED_EFFETS: ApiGsbMedicaments[];
+  MED_CONTREINDIC: ApiGsbMedicaments[];
+  MED_PRIXECHANTILLON: ApiGsbMedicaments[];
+  MED_DEPOTLEGAL: ApiGsbMedicaments[];
 }

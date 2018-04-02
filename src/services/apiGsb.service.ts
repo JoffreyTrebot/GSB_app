@@ -24,4 +24,13 @@ export class ApiGsbService {
         .catch(error => console.log('Une erreur est survenue ' + error))
     }
 
+    public getMedicaments(): Promise<any> {
+		const url = `${this.baseUrl}apiGSB/medicament/read.php`;
+
+        return this.http.get(url)
+        .toPromise()
+        .then(response => response.json())
+        .catch(error => console.log('Une erreur est survenue ' + error))
+    }
+
 }

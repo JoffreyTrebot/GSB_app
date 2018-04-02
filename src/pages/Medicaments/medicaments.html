@@ -7,5 +7,14 @@
 </ion-header>
 
 <ion-content>
-  <h2>MEDICAMENTS</h2>
+  <ion-list *ngFor="let data of medicaments.medicaments">
+    <ion-item>
+      <h2>Code : {{ data.MED_DEPOTLEGAL}}</h2>
+      <h2>Nom : {{ data.MED_NOMCOMMERCIAL}} | Famille : {{ data.FAM_CODE }}</h2>
+      <h2>Composition : {{ data.MED_COMPOSITION }}</h2>
+      <h2>Effets indésirables : {{ data.MED_EFFETS }}</h2>
+      <h2>Contre indications : {{ data.MED_CONTREINDIC }}</h2>
+      <h2>Prix echantillon : {{ data.MED_PRIXECHANTILLON }} </h2>
+    </ion-item>
+  </ion-list>
 </ion-content>
