@@ -12,7 +12,7 @@ import { MenuPage } from '../pages/Menu/menu';
 import { MedicamentsPage } from '../pages/Medicaments/medicaments';
 import { VisiteursPage } from '../pages/Visiteurs/visiteurs';
 import { PraticiensPage } from '../pages/Praticiens/praticiens';
-
+import { RapportsPage } from '../pages/Rapports/rapports';
 // Api
 import { HttpModule } from '@angular/http';
 import { ApiGsbService } from '../services/apiGsb.service';
@@ -24,6 +24,7 @@ import { ApiGsbService } from '../services/apiGsb.service';
     MenuPage,
     MedicamentsPage,
     VisiteursPage,
+    RapportsPage,
     PraticiensPage
   ],
   imports: [
@@ -38,6 +39,7 @@ import { ApiGsbService } from '../services/apiGsb.service';
     MenuPage,
     MedicamentsPage,
     VisiteursPage,
+    RapportsPage,
     PraticiensPage
   ],
   providers: [

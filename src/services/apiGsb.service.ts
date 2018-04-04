@@ -11,7 +11,7 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class ApiGsbService {
 
-    private baseUrl: string = 'http://joffreytrebot.raidghost.com/';
+    private baseUrl: string = 'https://joffreytrebot.fr/';
 
     constructor(private http: Http) { }
 
@@ -41,5 +41,25 @@ export class ApiGsbService {
         .then(response => response.json())
         .catch(error => console.log('Une erreur est survenue ' + error))
     }
+
+    public getUnCollaborateurs(id): Promise<any> {
+
+		const url = `${this.baseUrl}apiGSB/collaborateur/read_one.php?id=${id}`;
+    console.log(url);
+        return this.http.get(url)
+        .toPromise()
+        .then(response => response.json())
+        .catch(error => console.log('Une erreur est survenue ' + error))
+    }
+
+    public getRapports(): Promise<any> {
+		const url = `${this.baseUrl}apiGSB/rapport_visite/read.php`;
+
+        return this.http.get(url)
+        .toPromise()
+        .then(response => response.json())
+        .catch(error => console.log('Une erreur est survenue ' + error))
+    }
+
 
 }

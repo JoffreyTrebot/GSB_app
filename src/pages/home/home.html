@@ -11,15 +11,15 @@
   <ion-list>
     <ion-item>
       <ion-label color="primary">Matricule</ion-label>
-      <ion-input placeholder="ex: a131"></ion-input>
+      <ion-input placeholder="ex: a131" [(ngModel)]="matricule"></ion-input>
     </ion-item>
 
     <ion-item>
       <ion-label color="primary">Date d'embauche</ion-label>
-      <ion-datetime placeholder=" ex: 26/02/1997" displayFormat="DD/MM/YYYY" [(ngModel)]="myDate"></ion-datetime>
+      <ion-datetime placeholder=" ex: 1992/12/11" displayFormat="DD/MM/YYYY" [(ngModel)]="date"></ion-datetime>
     </ion-item>
 
-    <button ion-button full (tap)="show()">CONNEXION</button>
+    <button ion-button full (tap)="connexion()">CONNEXION</button>
   </ion-list>
 
 </ion-content>

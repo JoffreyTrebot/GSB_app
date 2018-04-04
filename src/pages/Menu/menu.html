@@ -8,7 +8,7 @@
 
 <ion-content>
   <button class="btn" id="newR" ion-button full >Nouveau Rapport</button>
-  <button class="btn" id="conR" ion-button full >Consulter Rapport</button>
+  <button class="btn" id="conR" ion-button full (tap)="showRap()">Consulter Rapport</button>
   <button class="btn" id="pra" ion-button full (tap)="showPra()">Praticiens</button>
   <button class="btn" id="med" ion-button full (tap)="showMed()">Medicaments</button>
   <button class="btn" id="vis" ion-button full (tap)="showVis()">Visiteurs</button>

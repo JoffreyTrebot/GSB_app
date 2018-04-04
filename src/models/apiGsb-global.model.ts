@@ -1,6 +1,7 @@
 import { ApiGsbPraticiens } from './apiGsb-praticiens.model';
 import { ApiGsbMedicaments } from './apiGsb-medicaments.model';
 import { ApiGsbCollaborateurs } from './apiGsb-collaborateurs.model';
+import { ApiGsbRapportvisite } from './apiGsb-rapportvisite.model';
 
 export class ApiGsbGlobal{
   praticiens: string;
@@ -32,4 +33,11 @@ export class ApiGsbGlobal{
   COL_VILLE: ApiGsbCollaborateurs[];
   LAB_CHEFVENTE: ApiGsbCollaborateurs[];
   COL_MATRICULE: ApiGsbCollaborateurs[];
+
+  Rapport_visite: string;
+  COL_MATRICULE: ApiGsbRapportvisite[];
+  RAP_NUM: ApiGsbRapportvisite[];
+  PRA_NUM: ApiGsbRapportvisite[];
+  RAP_DATE: ApiGsbRapportvisite[];
+  RAP_BILAN: ApiGsbRapportvisite[];
 }
