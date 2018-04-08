@@ -5,17 +5,19 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
+
+// Page
 import { HomePage } from '../pages/home/home';
-
 import { MenuPage } from '../pages/Menu/menu';
-
 import { MedicamentsPage } from '../pages/Medicaments/medicaments';
 import { VisiteursPage } from '../pages/Visiteurs/visiteurs';
 import { PraticiensPage } from '../pages/Praticiens/praticiens';
 import { RapportsPage } from '../pages/Rapports/rapports';
+import { NewRapportPage } from '../pages/newRapport/newrapport';
 // Api
 import { HttpModule } from '@angular/http';
 import { ApiGsbService } from '../services/apiGsb.service';
+
 
 @NgModule({
   declarations: [
@@ -25,12 +27,13 @@ import { ApiGsbService } from '../services/apiGsb.service';
     MedicamentsPage,
     VisiteursPage,
     RapportsPage,
-    PraticiensPage
+    PraticiensPage,
+    NewRapportPage
   ],
   imports: [
     HttpModule,
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -40,7 +43,8 @@ import { ApiGsbService } from '../services/apiGsb.service';
     MedicamentsPage,
     VisiteursPage,
     RapportsPage,
-    PraticiensPage
+    PraticiensPage,
+    NewRapportPage
   ],
   providers: [
     ApiGsbService,

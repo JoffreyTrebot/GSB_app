@@ -1,7 +1,7 @@
 // Core components
 import { Injectable }   from '@angular/core';
-import { Http }         from '@angular/http';
-
+import { Http } from '@angular/http';
+import { Observable } from 'rxjs/Observable';
 // RxJS
 import 'rxjs/add/operator/toPromise';
 import 'rxjs/add/operator/map';
@@ -12,6 +12,7 @@ import 'rxjs/add/operator/map';
 export class ApiGsbService {
 
     private baseUrl: string = 'https://joffreytrebot.fr/';
+    data: Observable<any>;
 
     constructor(private http: Http) { }
 
@@ -59,6 +60,42 @@ export class ApiGsbService {
         .toPromise()
         .then(response => response.json())
         .catch(error => console.log('Une erreur est survenue ' + error))
+    }
+
+    public getMotif(): Promise<any> {
+		const url = `${this.baseUrl}apiGSB/motif/read.php`;
+
+        return this.http.get(url)
+        .toPromise()
+        .then(response => response.json())
+        .catch(error => console.log('Une erreur est survenue ' + error))
+    }
+
+    public getMaxRapport(): Promise<any> {
+		const url = `${this.baseUrl}apiGSB/rapport_visite/readMax.php`;
+
+        return this.http.get(url)
+        .toPromise()
+        .then(response => response.json())
+        .catch(error => console.log('Une erreur est survenue ' + error))
+    }
+
+    public setRapport(MATRICULE, NUM, BILAN, LIBELLE): Promise<any> {
+
+      const url = `${this.baseUrl}apiGSB/rapport_visite/create.php`;
+
+
+      let postData = new FormData();
+      postData.append('COL_MATRICULE', MATRICULE);
+      postData.append('PRA_NUM', NUM);
+      postData.append('RAP_BILAN', BILAN);
+      postData.append('MOTIF_LIBELLE', LIBELLE);
+      this.data = this.http.post(url, postData);
+      this.data.subscribe(data => {
+        console.log(data['_body']);
+      }, error => {
+        console.log(error);// Error getting the data
+      });
     }
 
 

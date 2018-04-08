@@ -1,4 +1,4 @@
-export class ApiGsbMedicaments{
+export class ApiGsbCollaborateurs{
   COL_NOM: string;
   COL_PRENOM: string;
   COL_ADRESSE: string;
@@ -7,4 +7,5 @@ export class ApiGsbMedicaments{
   COL_VILLE: string;
   LAB_CHEFVENTE: string;
   COL_MATRICULE: string;
+  COL_DATEEMBAUCHE: string;
 }

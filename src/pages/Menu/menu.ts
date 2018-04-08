@@ -5,6 +5,8 @@ import { PraticiensPage } from '../Praticiens/praticiens';
 import { MedicamentsPage } from '../Medicaments/medicaments';
 import { VisiteursPage } from '../Visiteurs/visiteurs';
 import { RapportsPage } from '../Rapports/rapports';
+import { NewRapportPage} from '../newRapport/newrapport';
+
 @Component({
   selector: 'page-menu',
   templateUrl: 'menu.html'
@@ -12,6 +14,9 @@ import { RapportsPage } from '../Rapports/rapports';
 export class MenuPage {
 
   constructor(public navCtrl: NavController) {
+  }
+  private showNRap(){
+    this.navCtrl.push(NewRapportPage);
   }
   private showRap(){
     this.navCtrl.push(RapportsPage);

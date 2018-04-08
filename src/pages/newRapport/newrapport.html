@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      GSB Application
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <h2 *ngFor="let data of Maxrapport.Max_rapport" >Numéro rapport : {{ data.MAX }}</h2>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="primary">Praticiens</ion-label>
+      <ion-select [(ngModel)]="lePraticien" multiple="false" cancelText="Annuler" okText="Valider" >
+        // boucle sur les praticiens
+        <ion-option *ngFor="let data of praticiens.praticiens" value="{{ data.PRA_NUM }}">{{ data.PRA_NOM }} {{ data.PRA_PRENOM }}</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="primary">Date de visite</ion-label>
+      <ion-datetime placeholder=" ex: 2018/04/07" displayFormat="DD/MM/YYYY" [(ngModel)]="date"></ion-datetime>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="primary">Motif visite</ion-label>
+      <ion-select [(ngModel)]="leMotif" multiple="false" cancelText="Annuler" okText="Valider" >
+        // boucle sur les motifs de visite
+        <ion-option  *ngFor="let data of motif.motifs" value="{{ data.MOTIF_LIBELLE }}">{{ data.MOTIF_LIBELLE }}</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Bilan</ion-label>
+      <ion-textarea [(ngModel)]="leBilan" placeholder="Enter a description"></ion-textarea>
+    </ion-item>
+
+
+    <button ion-button full (tap)="valider()">VALIDER</button>
+
+  </ion-list>
+</ion-content>

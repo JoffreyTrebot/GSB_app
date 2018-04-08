@@ -4,4 +4,5 @@ export class ApiGsbRapportvisite{
   PRA_NUM: string;
   RAP_DATE: string;
   RAP_BILAN: string;
+  MOTIF_LIBELLE: string;
 }
