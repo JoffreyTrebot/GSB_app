@@ -1,12 +1,12 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      GSB Application
+      Nouveau rapport
     </ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content>
+<ion-content padding>
   <ion-list>
     <ion-item>
       <h2 *ngFor="let data of Maxrapport.Max_rapport" >Numéro rapport : {{ data.MAX }}</h2>
@@ -35,11 +35,11 @@
 
     <ion-item>
       <ion-label>Bilan</ion-label>
-      <ion-textarea [(ngModel)]="leBilan" placeholder="Enter a description"></ion-textarea>
+      <ion-textarea id="textarea" [(ngModel)]="leBilan" placeholder="Enter a description"></ion-textarea>
     </ion-item>
 
 
-    <button ion-button full (tap)="valider()">VALIDER</button>
+    <button id="btn" ion-button full (tap)="valider()">VALIDER</button>
 
   </ion-list>
 </ion-content>

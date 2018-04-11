@@ -1,5 +1,33 @@
 page-home {
+
   ion-header{
     text-align: center;
+  }
+
+  ion-img{
+    margin-top: 50px;
+    background-color: white;
+    width: 170px;
+    height: 200px;
+  }
+
+  #list{
+    width: 95%;
+  }
+  #logo{
+    text-align: center;
+  }
+
+  #list{
+    margin-bottom: 50px;
+  }
+
+  #btn{
+    border-radius: 5px;
+    margin-right: 10px;
+    margin-left: 10px;
+    width: 95%;
+    height: 50px;
+    background-color: #66a3d3;
   }
 }

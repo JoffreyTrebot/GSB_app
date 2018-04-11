@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import { ToastController } from 'ionic-angular';
 
 import { MenuPage } from '../Menu/menu';
 
@@ -17,17 +18,25 @@ export class HomePage {
     matricule: string;
     date: string;
 
-    constructor(public navCtrl: NavController, private apiGsbService: ApiGsbService) {
+    constructor(public navCtrl: NavController, private apiGsbService: ApiGsbService, private toastCtrl: ToastController) {
 
     }
 
     private connexion(){
-
       this.apiGsbService.getUnCollaborateurs(this.matricule)
       .then(collaborateurFetched => {
         this.collaborateur = collaborateurFetched;
         if(this.matricule != null && this.collaborateur.COL_DATEEMBAUCHE == this.date){
           this.navCtrl.push(MenuPage);
+        }
+        else{
+          let toast = this.toastCtrl.create({
+            message: 'Vos informations de connexion sont incorrectes',
+            duration: 3000,
+            position: 'top'
+          });
+
+          toast.present();
         }
       })
     }

@@ -1,20 +1,20 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      GSB Application
+      Visiteurs
     </ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content>
+<ion-content padding>
   <ion-list *ngFor="let data of collaborateurs.collaborateurs">
     <ion-item>
-      <h2>Matricule : {{ data.COL_MATRICULE }}</h2>
-      <h2>Nom : {{ data.COL_NOM }} | Prénom : {{ data.COL_PRENOM }}</h2>
-      <h2>Adresse : {{ data.COL_ADRESSE }}, {{ data.COL_CP }}</h2>
-      <h2>Ville : {{ data.COL_VILLE }}</h2>
-      <h2>Secteur : {{ data.SEC_LIBELLE }}</h2>
-      <h2>Labo : {{ data.LAB_CHEFVENTE }}</h2>
+      <h2><b>Matricule : </b>{{ data.COL_MATRICULE }}</h2>
+      <h2><b>Nom : </b>{{ data.COL_NOM }} | <b>Prénom : </b>{{ data.COL_PRENOM }}</h2>
+      <h2><b>Adresse : </b>{{ data.COL_ADRESSE }}, {{ data.COL_CP }}</h2>
+      <h2><b>Ville : </b>{{ data.COL_VILLE }}</h2>
+      <h2><b>Secteur : </b>{{ data.SEC_LIBELLE }}</h2>
+      <h2><b>Labo : </b>{{ data.LAB_CHEFVENTE }}</h2>
     </ion-item>
   </ion-list>
 </ion-content>

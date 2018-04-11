@@ -1,3 +1,18 @@
 page-newrapport{
-  
+  .toolbar-background{
+    background-color: #66a3d3;
+  }
+  .toolbar-title{
+    color: white;
+  }
+
+  #btn{
+    border-radius: 5px;
+    margin-right: 10px;
+    margin-left: 10px;
+    width: 95%;
+    height: 50px;
+    background-color: #66a3d3;
+    margin-top: 50px;
+  }
 }

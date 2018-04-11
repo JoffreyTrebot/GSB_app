@@ -1,20 +1,20 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      GSB Application
+      Medicaments
     </ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content>
+<ion-content padding>
   <ion-list *ngFor="let data of medicaments.medicaments">
     <ion-item>
-      <h2>Code : {{ data.MED_DEPOTLEGAL}}</h2>
-      <h2>Nom : {{ data.MED_NOMCOMMERCIAL}} | Famille : {{ data.FAM_CODE }}</h2>
-      <h2>Composition : {{ data.MED_COMPOSITION }}</h2>
-      <h2>Effets indésirables : {{ data.MED_EFFETS }}</h2>
-      <h2>Contre indications : {{ data.MED_CONTREINDIC }}</h2>
-      <h2>Prix echantillon : {{ data.MED_PRIXECHANTILLON }} </h2>
+      <h2><b>Code : </b>{{ data.MED_DEPOTLEGAL}}</h2>
+      <h2><b>Nom : </b>{{ data.MED_NOMCOMMERCIAL}} | <b>Famille : </b>{{ data.FAM_CODE }}</h2>
+      <h2><b>Composition : </b>{{ data.MED_COMPOSITION }}</h2>
+      <h2><b>Effets indésirables : </b>{{ data.MED_EFFETS }}</h2>
+      <h2><b>Contre indications : </b>{{ data.MED_CONTREINDIC }}</h2>
+      <h2><b>Prix echantillon : </b>{{ data.MED_PRIXECHANTILLON }} </h2>
     </ion-item>
   </ion-list>
 </ion-content>

@@ -80,9 +80,10 @@ export class ApiGsbService {
         .catch(error => console.log('Une erreur est survenue ' + error))
     }
 
-    public setRapport(MATRICULE, NUM, BILAN, LIBELLE): Promise<any> {
+    public setRapport(MATRICULE, NUM, BILAN, LIBELLE,DATE): Promise<any> {
 
       const url = `${this.baseUrl}apiGSB/rapport_visite/create.php`;
+
 
 
       let postData = new FormData();
@@ -90,12 +91,11 @@ export class ApiGsbService {
       postData.append('PRA_NUM', NUM);
       postData.append('RAP_BILAN', BILAN);
       postData.append('MOTIF_LIBELLE', LIBELLE);
-      this.data = this.http.post(url, postData);
-      this.data.subscribe(data => {
-        console.log(data['_body']);
-      }, error => {
-        console.log(error);// Error getting the data
-      });
+      postData.append('RAP_DATE', DATE);
+      return this.http.post(url, postData)
+      .toPromise()
+      .then(response => response.json())
+      .catch(error => console.log('Une erreur est survenue ' + error))
     }
 
 

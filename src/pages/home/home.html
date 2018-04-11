@@ -1,25 +1,21 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>
-      GSB Application
-    </ion-title>
-  </ion-navbar>
-</ion-header>
-
 <ion-content>
+  <ion-item id="logo">
+    <ion-img src="https://joffreytrebot.fr/img/logo-gsb.png"></ion-img>
+  </ion-item>
 
-  <ion-list>
+  <ion-list id="list">
+
     <ion-item>
-      <ion-label color="primary">Matricule</ion-label>
+      <ion-label color="primary"><ion-icon name="contact"> Matricule</ion-icon></ion-label>
       <ion-input placeholder="ex: a131" [(ngModel)]="matricule"></ion-input>
     </ion-item>
 
     <ion-item>
-      <ion-label color="primary">Date d'embauche</ion-label>
+      <ion-label color="primary"><ion-icon name="calendar"> Date d'embauche</ion-icon></ion-label>
       <ion-datetime placeholder=" ex: 1992/12/11" displayFormat="DD/MM/YYYY" [(ngModel)]="date"></ion-datetime>
     </ion-item>
 
-    <button ion-button full (tap)="connexion()">CONNEXION</button>
   </ion-list>
 
+    <button id="btn" ion-button (tap)="connexion()">CONNEXION</button>
 </ion-content>

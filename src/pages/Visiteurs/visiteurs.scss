@@ -1,3 +1,15 @@
 page-visiteurs{
-  
+  .toolbar-background{
+    background-color: #66a3d3;
+  }
+  .toolbar-title{
+    color: white;
+  }
+
+  ion-list{
+    box-shadow: 0px 2px 5px black;
+  }
+  ion-item{
+    width: 100%;
+  }
 }

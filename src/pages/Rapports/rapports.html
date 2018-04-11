@@ -1,19 +1,19 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      GSB Application
+      Rapports
     </ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content>
+<ion-content padding>
   <ion-list *ngFor="let data of rapports.Rapport_visite">
     <ion-item>
-      <h2>Numéro : {{ data.RAP_NUM }}</h2>
-      <h2>Praticiens: {{ data.PRA_NOM }}</h2>
-      <h2>Date rapport: {{ data.RAP_DATE }}</h2>
-      <h2>Motif visite : {{ data.MOTIF_LIBELLE }} </h2>
-      <h2>Bilan : {{ data.RAP_BILAN}} </h2>
+      <h2><b>Numéro : </b>{{ data.RAP_NUM }}</h2>
+      <h2><b>Praticiens: </b>{{ data.PRA_NOM }}</h2>
+      <h2><b>Date rapport: </b>{{ data.RAP_DATE }}</h2>
+      <h2><b>Motif visite : </b>{{ data.MOTIF_LIBELLE }} </h2>
+      <h2><b>Bilan : </b>{{ data.RAP_BILAN}} </h2>
     </ion-item>
   </ion-list>
 </ion-content>
