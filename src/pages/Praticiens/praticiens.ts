@@ -16,6 +16,7 @@ export class PraticiensPage {
     this.apiGsbService.getPraticiens()
     .then(praticiensFetched => {
       this.praticiens = praticiensFetched;
+      console.log(this.praticiens);
     })
   }
 

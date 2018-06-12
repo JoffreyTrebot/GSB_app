@@ -7,53 +7,44 @@ import { ApiGsbGlobal } from '../../models/apiGsb-global.model';
 import { ApiGsbService } from '../../services/apiGsb.service';
 
 @Component({
-  selector: 'page-newrapport',
-  templateUrl: 'newrapport.html'
+  selector: 'page-noteDeFrais',
+  templateUrl: 'noteDeFrais.html'
 })
-export class NewRapportPage {
+export class noteDeFraisPage {
 
   praticiens: ApiGsbGlobal = new ApiGsbGlobal;
-  Maxrapport: ApiGsbGlobal = new ApiGsbGlobal;
-  motif: ApiGsbGlobal = new ApiGsbGlobal;
 
-  leMotif: string;
-  lePraticien: number;
-  leBilan: string;
-  leMatricule: string;
+  matricule: string;
+  lePraticien:string;
+  date:string;
+  midi:number;
+  soir:number;
+  nuit:number;
+  hf:number;
+  justif:number;
 
   results: any;
-
   constructor(public navCtrl: NavController, private apiGsbService: ApiGsbService, private alertCtrl: AlertController, private navParams: NavParams) {
-    
-    this.leMatricule = navParams.get('matricule');
-    
+    this.matricule = navParams.get('matricule');
+
     this.apiGsbService.getPraticiens()
     .then(praticiensFetched => {
       this.praticiens = praticiensFetched;
     });
-
-    this.apiGsbService.getMaxRapport()
-    .then(MaxrapportFetched => {
-      this.Maxrapport = MaxrapportFetched;
-    });
-
-    this.apiGsbService.getMotif()
-    .then(motifFetched => {
-      this.motif = motifFetched;
-    });
   }
 
   private valider(){
-    if(this.leBilan != undefined || this.leMotif != undefined || this.lePraticien != undefined){
-      this.apiGsbService.setRapport(this.leMatricule, this.lePraticien, this.leBilan, this.leMotif)
+    
+    if(this.midi != undefined || this.soir != undefined || this.nuit != undefined || this.hf != undefined || this.justif != undefined){
+      this.apiGsbService.setNoteDeFrais(this.matricule, this.lePraticien, this.date, this.midi, this.soir, this.nuit, this.hf, this.justif)
       .then(result => {
         this.results = result;
         console.log(result);
       });
 
       let alert = this.alertCtrl.create({
-        title: 'Nouveau rapport !',
-        subTitle: 'Vous venez de créer un nouveau rapport avec succès.',
+        title: 'Nouvelle note !',
+        subTitle: 'Vous venez de créer une note de frais avec succès.',
         buttons: ['Ok']
       });
       alert.present();

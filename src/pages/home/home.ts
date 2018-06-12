@@ -27,7 +27,7 @@ export class HomePage {
       .then(collaborateurFetched => {
         this.collaborateur = collaborateurFetched;
         if(this.matricule != null && this.collaborateur.COL_DATEEMBAUCHE == this.date){
-          this.navCtrl.push(MenuPage);
+          this.navCtrl.push(MenuPage, { matricule: this.matricule });
         }
         else{
           let toast = this.toastCtrl.create({

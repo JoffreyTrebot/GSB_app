@@ -1,0 +1,23 @@
+<ion-header >
+  <ion-navbar>
+    <ion-title>
+      Note de Frais
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list *ngFor="let data of noteDeFrais.noteDeFrais">
+    <ion-item>
+      <h2><b>Numéro : </b>{{ data.id}}</h2>
+      <h2><b>Nom praticien : </b>{{ data.PRA_NOM}}</h2>
+      <h2><b>Date et heure : </b> {{ data.DateVisite }}</h2>
+      <h2><b>Montant repas du midi : </b> {{ data.MontantRepasMidi}}</h2>
+      <h2><b>Montant repas du soir: </b>{{ data.MontantRepasSoir }}</h2>
+      <h2><b>Prix de la nuit : </b>{{ data.PrixNuit }} </h2>
+      <h2><b>Montant total HF: </b>{{ data.MontantTotalHF }} </h2>
+      <h2><b>Nombre de justificatif : </b>{{ data.NbJustif }} </h2>
+      <h2><b>Montant total : </b>{{ data.MontantTotal }} </h2>
+    </ion-item>
+  </ion-list>
+</ion-content>

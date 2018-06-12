@@ -4,6 +4,7 @@ import { ApiGsbCollaborateurs } from './apiGsb-collaborateurs.model';
 import { ApiGsbRapportvisite } from './apiGsb-rapportvisite.model';
 import { ApiGsbMotif } from './apiGsb-motif.model';
 import { ApiGsbMaxRapport } from './apiGsb-Maxrapport.model';
+import { ApiGsbNoteDeFrais } from './apiGSB-noteDeFrais.model';
 
 export class ApiGsbGlobal{
   praticiens: ApiGsbPraticiens[];
@@ -14,4 +15,5 @@ export class ApiGsbGlobal{
   motifs: ApiGsbMotif[];
   MAX: number;
   Max_rapport: ApiGsbMaxRapport[];
+  noteDeFrais: ApiGsbNoteDeFrais[];
 }

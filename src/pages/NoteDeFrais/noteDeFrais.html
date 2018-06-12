@@ -1,0 +1,51 @@
+<ion-header >
+  <ion-navbar>
+    <ion-title>
+      Ajout Note de Frais
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+  <ion-item>
+    <ion-label color="primary">Praticiens</ion-label>
+    <ion-select [(ngModel)]="lePraticien" multiple="false" cancelText="Annuler" okText="Valider" >
+      // boucle sur les praticiens
+      <ion-option *ngFor="let data of praticiens.praticiens" value="{{ data.PRA_NOM }}">{{ data.PRA_NOM }} {{ data.PRA_PRENOM }}</ion-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
+    <ion-label color="primary">Date de visite</ion-label>
+    <ion-datetime placeholder=" ex: 2018/04/07" displayFormat="DD/MM/YYYY HH:mm" [(ngModel)]="date"></ion-datetime>
+  </ion-item>
+
+  <ion-item>
+    <ion-label color="primary">Montant repas du midi</ion-label>
+    <ion-input type="number" placeholder="Number Input with no label"[(ngModel)]="midi"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label color="primary">Montant repas du soir</ion-label>
+    <ion-input type="number" placeholder="Number Input with no label"[(ngModel)]="soir"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label color="primary">Prix de la nuit</ion-label>
+    <ion-input type="number" placeholder="Number Input with no label"[(ngModel)]="nuit"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label color="primary">Montant total HF</ion-label>
+    <ion-input type="number" placeholder="Number Input with no label"[(ngModel)]="hf"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label color="primary">Nombre justificatif</ion-label>
+    <ion-input type="number" placeholder="Number Input with no label"[(ngModel)]="justif"></ion-input>
+  </ion-item>
+
+  <button id="btn" ion-button full (tap)="valider()">VALIDER</button>
+  </ion-list>
+</ion-content>

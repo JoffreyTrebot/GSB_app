@@ -14,6 +14,8 @@ import { VisiteursPage } from '../pages/Visiteurs/visiteurs';
 import { PraticiensPage } from '../pages/Praticiens/praticiens';
 import { RapportsPage } from '../pages/Rapports/rapports';
 import { NewRapportPage } from '../pages/newRapport/newrapport';
+import { noteDeFraisPage } from '../pages/NoteDeFrais/noteDeFrais';
+import { RnoteDeFraisPage } from '../pages/RNoteDeFrais/RnoteDeFrais';
 // Api
 import { HttpModule } from '@angular/http';
 import { ApiGsbService } from '../services/apiGsb.service';
@@ -28,7 +30,9 @@ import { ApiGsbService } from '../services/apiGsb.service';
     VisiteursPage,
     RapportsPage,
     PraticiensPage,
-    NewRapportPage
+    NewRapportPage,
+    noteDeFraisPage,
+    RnoteDeFraisPage
   ],
   imports: [
     HttpModule,
@@ -44,7 +48,9 @@ import { ApiGsbService } from '../services/apiGsb.service';
     VisiteursPage,
     RapportsPage,
     PraticiensPage,
-    NewRapportPage
+    NewRapportPage,
+    noteDeFraisPage,
+    RnoteDeFraisPage
   ],
   providers: [
     ApiGsbService,
